@@ -11,7 +11,7 @@ sed -i 's/^#CONFIG_IEEE80211R=y$/CONFIG_IEEE80211R=y/g' hostap/hostapd/.config
 echo "CFLAGS += -I/usr/include/libnl3" >> hostap/hostapd/.config
 
 echo "Apply Patch"
-patch source: 'patchPMKID.patch', target: "hostap/src/ap/wpa_auth.c"
+patch "hostap/src/ap/wpa_auth.c" "patchPMKID.patch"
 
 echo "Building.."
 make -C hostap/hostapd
