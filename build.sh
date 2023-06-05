@@ -3,6 +3,7 @@
 echo "Installing libnl3-dev"
 
 apt install libssl-dev libnl-3-dev
+apt install libnl-genl-3-dev
 
 
 echo "Fixing configuration files"
